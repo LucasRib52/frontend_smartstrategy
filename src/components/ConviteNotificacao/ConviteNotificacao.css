@@ -1,0 +1,126 @@
+.convite-notificacao {
+    position: relative;
+    display: inline-block;
+}
+
+.convite-notificacao-bell {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.convite-notificacao-bell:hover {
+    color: #007bff;
+}
+
+.convite-notificacao-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.convite-notificacao-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 8px;
+}
+
+.convite-notificacao-empty {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+}
+
+.convite-card {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.convite-card:last-child {
+    border-bottom: none;
+}
+
+.convite-info h4 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.convite-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.convite-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.botao-aceitar-convite,
+.botao-recusar-convite {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.botao-aceitar-convite {
+    background-color: #28a745;
+    color: white;
+}
+
+.botao-aceitar-convite:hover {
+    background-color: #218838;
+}
+
+.botao-recusar-convite {
+    background-color: #dc3545;
+    color: white;
+}
+
+.botao-recusar-convite:hover {
+    background-color: #c82333;
+}
+
+.botao-ver-todos {
+    width: 100%;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border: none;
+    border-top: 1px solid #eee;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.botao-ver-todos:hover {
+    background-color: #e9ecef;
+} 

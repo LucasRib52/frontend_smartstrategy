@@ -1,0 +1,211 @@
+.selecionar-empresa-pf-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181c20 0%, #1f2328 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 10px 20px 10px;
+}
+
+.selecionar-empresa-pf-titulo {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(98, 63, 251, 0.2);
+}
+
+.selecionar-empresa-pf-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.selecionar-empresa-pf-card {
+  background: #23272f;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(98, 63, 251, 0.10);
+  padding: 36px 32px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 270px;
+  max-width: 320px;
+  width: 100%;
+  transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.selecionar-empresa-pf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 24px rgba(98, 63, 251, 0.18);
+  border-color: #623FFB;
+}
+
+.selecionar-empresa-pf-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #623FFB 0%, #8B6AFF 100%);
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+
+.selecionar-empresa-pf-card:hover::before {
+  opacity: 1;
+}
+
+.selecionar-empresa-pf-logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.selecionar-empresa-pf-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(98, 63, 251, 0.10);
+  border: 3px solid #623FFB;
+  display: block;
+  transition: transform 0.18s;
+}
+
+.selecionar-empresa-pf-card:hover .selecionar-empresa-pf-logo {
+  transform: scale(1.04);
+}
+
+.selecionar-empresa-pf-logo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #623FFB 0%, #8B6AFF 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(98, 63, 251, 0.10);
+}
+
+.selecionar-empresa-pf-nome {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.selecionar-empresa-pf-cnpj,
+.selecionar-empresa-pf-email {
+  color: #e0e4fa;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.selecionar-empresa-pf-botao {
+  margin-top: 24px;
+  background: linear-gradient(90deg, #623FFB 0%, #8B6AFF 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 2px 8px rgba(98, 63, 251, 0.10);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.selecionar-empresa-pf-botao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.38) 50%, rgba(255,255,255,0.18) 100%);
+  transition: left 0.18s;
+  z-index: 2;
+}
+
+.selecionar-empresa-pf-botao:hover::before {
+  left: 100%;
+}
+
+.selecionar-empresa-pf-botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(98, 63, 251, 0.18);
+}
+
+.selecionar-empresa-pf-loading,
+.selecionar-empresa-pf-erro {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: rgba(98, 63, 251, 0.08);
+  border: 1px solid rgba(98, 63, 251, 0.13);
+}
+
+.selecionar-empresa-pf-perfil-option {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.selecionar-empresa-pf-botao-perfil {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.selecionar-empresa-pf-botao-perfil:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 700px) {
+  .selecionar-empresa-pf-lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .selecionar-empresa-pf-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 28px 20px 24px 20px;
+  }
+  
+  .selecionar-empresa-pf-titulo {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 20px;
+  }
+} 

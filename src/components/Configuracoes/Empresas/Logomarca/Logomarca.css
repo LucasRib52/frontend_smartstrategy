@@ -1,0 +1,114 @@
+/* Formulário principal */
+.empresa-logomarca-form {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.btn-selecionar-imagem {
+  background: #f8fafc;
+  color: #333;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 18px;
+  margin-top: 8px;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-selecionar-imagem:hover {
+  background: #f0e6ff;
+  color: #623FFB;
+  border-color: #b39dff;
+}
+
+.logomarca-alerta-vermelho {
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 7px;
+  padding: 12px 18px;
+  font-size: 1.04rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.logomarca-alerta-vermelho strong, .logomarca-alerta-vermelho b {
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.logomarca-preview-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 220px;
+  margin-bottom: 18px;
+  margin-top: 8px;
+}
+.logomarca-preview {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fafbfc;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  display: block;
+}
+
+.logomarca-alerta-azul {
+  background: #623FFB;
+  color: #fff;
+  border-radius: 7px;
+  padding: 12px 18px;
+  font-size: 1.04rem;
+  margin-bottom: 22px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.logomarca-alerta-azul strong {
+  font-weight: 700;
+  text-shadow: 0 1px 0 #4a2fc0;
+}
+
+.logomarca-actions {
+  margin: 18px 0 0 0;
+  padding-bottom: 18px;
+}
+.btn-salvar {
+  background: #623FFB;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(98, 63, 251, 0.15);
+}
+.btn-salvar:hover {
+  background: #4a2fc0;
+}
+.check-icon {
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+@media (max-width: 700px) {
+  .logomarca-preview {
+    width: 120px;
+    height: 120px;
+  }
+  .logomarca-preview-wrapper {
+    min-height: 130px;
+  }
+} 

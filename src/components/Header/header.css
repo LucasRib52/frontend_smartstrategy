@@ -1,0 +1,212 @@
+/* ====== Estilização do Header ====== */
+
+/* Fonte base */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ====== Header Geral ====== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  padding: 12px 24px; /* Removido o padding vertical */
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 80px; /* Altura fixa do header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* ====== Seção Esquerda (Título) ====== */
+.header-left {
+  display: flex;
+  align-items: center;
+  height: 100%; /* Garante que o container ocupe toda a altura do header */
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.header-logo {
+  height: 150px; /* Logo maior */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(98, 63, 251, 0.1));
+  transition: transform 0.3s ease;
+  margin: -20px 0; /* Margem negativa para compensar o tamanho maior */
+}
+
+.header-logo:hover {
+  transform: scale(1.02);
+}
+
+/* ====== Navegação Central ====== */
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px; /* Espaçamento reduzido entre os botões de navegação */
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #623FFB;
+  background: rgba(98, 63, 251, 0.08);
+  font-weight: 600;
+}
+
+.nav-icon {
+  font-size: 16px;
+}
+
+/* ====== Área Direita: Busca, Ícones e Avatar com estilo "balão" ====== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espaçamento entre os elementos reduzido */
+  
+  /* Container com fundo claro e formato de "balão" */
+  background: #f4f7fe;
+  border-radius: 9999px;
+  padding: 6px 12px; /* Padding menor para um visual compacto */
+  min-width: 260px; /* Largura mínima reduzida */
+}
+
+.search-container {
+  position: relative;
+  flex: 1; /* Faz o input expandir */
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px; /* Ajuste de posição para compatibilizar com o padding reduzido */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #A3AED0;
+  font-size: 16px; /* Ícone levemente menor */
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 8px 8px 36px; /* Padding ajustado para reduzir a altura */
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  font-size: 12px; /* Fonte menor */
+  color: #2B3674;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.action-icons {
+  display: flex;
+  gap: 8px; /* Gap entre os ícones ajustado */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #A3AED0;
+  font-size: 16px; /* Ícones um pouco menores */
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.icon-button:hover {
+  color: #623FFB;
+  background: rgba(98, 63, 251, 0.08);
+}
+
+.profile-container {
+  position: relative;
+  margin-left: 16px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 1024px) {
+  .search-container {
+    width: 180px; /* Ajustado para telas menores */
+  }
+  
+  .header-nav {
+    gap: 16px;
+  }
+}

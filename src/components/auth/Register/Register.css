@@ -1,0 +1,422 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    background: #f6f7fb;
+    overflow-x: hidden;
+}
+
+.register-bg {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #f6f7fb 60%, #623FFB 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-bg::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: url('../../../assets/images/bg.svg') center/cover no-repeat,
+        radial-gradient(circle at 70% 30%, #a18fff33 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, #623FFB22 0%, transparent 70%);
+    opacity: 0.13;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.register-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #623FFB22;
+    padding: 2vw 4vw;
+    max-width: 94vw;
+    margin: 2vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.register-logo-top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2vh;
+}
+
+.register-logo-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 22px;
+    box-shadow: 0 6px 32px #a18fffcc, 0 0 0 6px #fff;
+    background: #fff;
+}
+
+.register-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.register-subtitle {
+    color: #666;
+    font-size: 1.12rem;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.register-form-modern {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.register-form-group-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.register-label-modern {
+    color: #333;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.register-input-icon-group {
+    display: flex;
+    align-items: center;
+    background: #f6f7fb;
+    border: 1.7px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0 14px;
+    transition: border 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.register-input-icon {
+    color: #623FFB;
+    font-size: 1.18rem;
+    margin-right: 10px;
+}
+
+.register-input-modern {
+    border: none;
+    background: transparent;
+    padding: 16px 0;
+    font-size: 1.08rem;
+    color: #222;
+    width: 100%;
+    outline: none;
+}
+
+.register-input-modern:focus {
+    background: transparent;
+}
+
+.register-input-icon-group:focus-within {
+    border-color: #623FFB;
+    box-shadow: 0 0 0 3px #623FFB22;
+}
+
+.register-submit-btn-modern {
+    width: 100%;
+    padding: 16px 0;
+    background: linear-gradient(90deg, #623FFB 60%, #8B6FFF 100%);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 12px #623FFB22;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.register-submit-btn-modern:disabled {
+    background: #e5e7eb;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.register-submit-btn-modern:hover:not(:disabled) {
+    background: linear-gradient(90deg, #7a5fff 60%, #a18fff 100%);
+    box-shadow: 0 6px 20px #623FFB33;
+}
+
+.register-error {
+    color: #dc3545;
+    background-color: #fff5f5;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    border: 1px solid #ffd7d7;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.register-success {
+    color: #28a745;
+    background-color: #f0fff4;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    border: 1px solid #c6f6d5;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.register-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #623FFB;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    z-index: 10;
+    width: auto;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.register-back-btn:hover {
+    background-color: #f6f7fb;
+}
+
+.register-back-btn svg {
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.register-back-btn span {
+    cursor: pointer;
+    pointer-events: none;
+}
+
+/* Estilos para seleção de tipo de usuário */
+.register-type-select {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 36px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.register-type-option {
+    width: 100%;
+    max-width: 340px;
+    padding: 28px 18px 22px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 24px #623FFB11, 0 1.5px 8px #a18fff22;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border 0.2s, transform 0.15s;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-type-option:hover,
+.register-type-option:active {
+    border-color: #623FFB;
+    box-shadow: 0 8px 32px #623FFB22, 0 2px 12px #a18fff33;
+    transform: translateY(-2px) scale(1.03);
+    background: linear-gradient(120deg, #f6f7fb 60%, #eae6ff 100%);
+}
+
+.register-type-icon {
+    font-size: 2.2rem;
+    color: #623FFB;
+    margin-bottom: 12px;
+    background: #f6f7fb;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 2px 8px #623FFB11;
+    display: inline-block;
+}
+
+.register-type-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.register-type-description {
+    color: #666;
+    font-size: 1.01rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .register-bg {
+        padding: 0;
+        min-height: 100vh;
+        align-items: flex-start;
+    }
+    
+    .register-card {
+        max-width: 96vw;
+        padding: 28px 8vw 18px 8vw;
+        border-radius: 18px;
+        margin: 32px auto 0 auto;
+        box-shadow: 0 4px 24px #623FFB22;
+    }
+    
+    .register-logo-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 14px;
+    }
+    
+    .register-title {
+        font-size: 1.8rem;
+    }
+    
+    .register-form-modern {
+        gap: 16px;
+    }
+    
+    .register-type-select {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .register-type-option {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .register-bg {
+        padding: 0;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .register-card {
+        max-width: 94vw;
+        padding: 24px 16px;
+        margin: 0;
+        max-height: 95vh;
+    }
+    
+    .register-logo-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        margin-top: 0;
+        box-shadow: 0 8px 32px #a18fffcc, 0 0 0 8px #fff;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transition: width 0.3s, height 0.3s;
+    }
+    
+    .register-title {
+        font-size: 1.5rem;
+    }
+    
+    .register-subtitle {
+        font-size: 1rem;
+    }
+    
+    .register-form-modern {
+        gap: 22px;
+    }
+    .register-form-group-modern {
+        gap: 12px;
+    }
+    .register-input-icon-group {
+        padding: 0 16px;
+        border-radius: 18px;
+        min-height: 54px;
+    }
+    .register-input-modern {
+        font-size: 1.12rem;
+        padding: 18px 0;
+        border-radius: 18px;
+    }
+    .register-submit-btn-modern {
+        margin-top: 22px;
+        margin-bottom: 10px;
+        padding: 18px 0;
+        font-size: 1.18rem;
+        border-radius: 18px;
+    }
+    
+    .register-back-btn {
+        top: 10px;
+        left: 10px;
+        padding: 8px;
+        min-width: 80px;
+    }
+    
+    .register-type-select {
+        gap: 36px;
+        margin-bottom: 40px;
+        padding: 0 0 12px 0;
+    }
+    .register-type-option {
+        padding: 28px 10px 20px 10px;
+        border-radius: 20px;
+    }
+    .register-card {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+}
+
+/* Centraliza e dá mais respiro ao conteúdo */
+.register-card {
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+    .register-card {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+} 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo circular -->
+  <circle cx="64" cy="64" r="64" fill="#f0f2f5"/>
+  
+  <!-- Cabeça -->
+  <circle cx="64" cy="52" r="24" fill="#90a4ae"/>
+  
+  <!-- Corpo -->
+  <path d="m24 128c0-32 24-40 40-40s40 8 40 40" fill="#90a4ae"/>
+  
+  <!-- Sombras suaves -->
+  <circle cx="64" cy="52" r="22" fill="#78909c" opacity="0.3"/>
+  <path d="m28 128c0-30 22-36 36-36s36 6 36 36" fill="#78909c" opacity="0.3"/>
+</svg> 

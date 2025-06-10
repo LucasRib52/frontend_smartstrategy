@@ -1,0 +1,254 @@
+/* Container principal do formulário */
+.empresa-geral-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+}
+
+/* Grid responsivo para os campos */
+.empresa-geral-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 18px;
+  align-items: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .empresa-geral-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .empresa-geral-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group label .info-tooltip {
+  background: #f5f0ff;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+  margin-left: 4px;
+  color: #623FFB;
+  border: 1px solid #b39dff;
+}
+
+input, select, textarea {
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1.01rem;
+  border: 1.5px solid #d6d6d6;
+  background: #f8fafc;
+  color: #23272f;
+  transition: border 0.18s, box-shadow 0.18s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #623FFB;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(98, 63, 251, 0.15);
+}
+input[disabled], select[disabled] {
+  background: #f3f3f3;
+  color: #aaa;
+}
+
+.site-group, .redes-sociais-group, .horario-group {
+  grid-column: 1 / -1;
+}
+
+.redes-sociais-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.redes-sociais-group .descricao {
+  font-weight: 400;
+  color: #623FFB;
+  font-size: 0.93em;
+  margin-left: 4px;
+}
+
+.redes-sociais-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.rede-social-tag {
+  background: #f8fafc;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px 5px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 0.97em;
+  margin-bottom: 2px;
+  border: 1px solid #e2e8f0;
+}
+.remover-rede {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.1em;
+  margin-left: 6px;
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+.remover-rede:hover {
+  background: #fee2e2;
+}
+.input-rede-social {
+  min-width: 180px;
+  max-width: 260px;
+}
+.adicionar-rede {
+  background: #623FFB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 0.97em;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.adicionar-rede:hover {
+  background: #4a2fc0;
+}
+
+.registro-crmv-group .registro-crmv-fields {
+  display: flex;
+  gap: 8px;
+}
+.registro-crmv-fields select {
+  width: 70px;
+  min-width: 60px;
+}
+.registro-crmv-fields input {
+  flex: 1;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+/* Responsividade extra para textarea */
+@media (max-width: 700px) {
+  .horario-group textarea {
+    min-height: 40px;
+  }
+}
+
+/* Toggle de tipo de pessoa */
+.tipo-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 22px;
+  padding: 8px 0 8px 2px;
+}
+.tipo-label {
+  font-weight: 600;
+  color: #333;
+  margin-right: 8px;
+  font-size: 1.04rem;
+}
+.tipo-toggle-btn {
+  background: #f8fafc;
+  color: #333;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  outline: none;
+  margin-right: 2px;
+}
+.tipo-toggle-btn.selected {
+  background: #623FFB;
+  color: #fff;
+  border-color: #623FFB;
+  box-shadow: 0 2px 8px rgba(98, 63, 251, 0.15);
+  z-index: 1;
+}
+.tipo-toggle-btn:not(.selected):hover {
+  background: #f0e6ff;
+  color: #623FFB;
+  border-color: #b39dff;
+}
+
+.erro-mensagem {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.mensagem {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.mensagem.sucesso {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.mensagem.erro {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.empresa-geral-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-salvar {
+  background: #623FFB;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-salvar:hover {
+  background: #4a2fc0;
+}
+
+.btn-salvar:disabled {
+  background: #b39dff;
+  cursor: not-allowed;
+} 
